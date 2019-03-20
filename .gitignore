@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+#build dir
+[Bb]uild/
+
+#Cmake settings
+CMakeSettings.json
+
+#visual studio cache
+.vs/
