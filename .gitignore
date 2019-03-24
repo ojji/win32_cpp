@@ -39,3 +39,4 @@ CMakeSettings.json
 
 #visual studio cache
 .vs/
+.vscode/
