@@ -11,20 +11,20 @@ int WINAPI wWinMain(HINSTANCE /*hInstance*/, HINSTANCE, PWSTR /*pCmdLine*/, int 
 
 	ShowWindow(sw.Window(), nCmdShow);
 
+	bool running = true;
 	MSG msg {};
-	while(true)
+	while(running)
 	{
 		while (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
 		{
+			if (msg.message == WM_QUIT)
+			{
+				running = false;
+			}
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
-		}
-		if (msg.message == WM_QUIT)
-		{
-			break;
 		}
 	}
 
 	return 0;
-
 }
